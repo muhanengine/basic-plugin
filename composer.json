@@ -1,0 +1,32 @@
+{
+  "name": "CodeDodamPlugin/CodeDodamPlugin-plugin",
+  "description": "icode SMS sending plug-in ",
+  "version": "0.5.0",
+  "license": "proprietary",
+  "type": "wordpress-plugin",
+  "authors": [
+    {
+      "name": "CodeDodam",
+      "email": "codedodam@gmail.com"
+    }
+  ],
+  "keywords": [
+    "CodeDodam",
+    "wordpress",
+    "plugin",
+    "examination"
+  ],
+  "require": {
+  },
+  "autoload": {
+    "classmap": [
+      "includes"
+    ],
+    "files": [
+      "includes/Libs/Utils.php",
+      "includes/Libs/Defines.php",
+      "includes/Libs/Functions.php",
+      "includes/Template-functions/TemplateFunctions.php"
+    ]
+  }
+}

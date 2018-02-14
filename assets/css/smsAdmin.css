@@ -1,0 +1,91 @@
+
+/* SMS Admin */
+#wpbody-content > div.dodam-wrap > h1 {
+    font-size: 23px;
+    font-weight: 400;
+    margin: 0;
+    padding: 9px 0 4px;
+    line-height: 29px;
+}
+#wpbody-content > div.dodam-wrap > div.about-text {
+    color: #72777c;
+    font-size: 14px;
+    line-height: 1.5;
+}
+#wpbody-content > div.dodam-wrap > div.dodam-logo > span {
+    color: #8c9196;
+    font-size: 11px;
+}
+#wpbody-content > div.dodam-wrap > h2.nav-tab-wrapper {
+    width: 99%;
+}
+
+
+/* SMS Send Form */
+#wpbody-content > div.dodam-wrap > div > div > form.frm_sms_send {
+    border: 5px solid #dedede;
+    width: 500px;
+    background-color: #eeeeee;
+}
+.wrap_inner {
+    padding: 0 10px 10px 10px;
+    border-bottom: 2px dashed #c5c5c5;
+    font-size: 12px;
+}
+.wrap_inner > h4 {
+    margin: 1em 0;
+    font-size: 14px;
+    border-bottom: 1px solid #e3e3e3;
+    padding-bottom: 3px;
+}
+.wrap_inner button {
+    color: #555;
+    background: #f7f7f7;
+    box-shadow: 0 1px 0 #ccc;
+    vertical-align: top;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 13px;
+    line-height: 23px;
+    height: 25px;
+    margin: 0;
+    padding: 0 10px 1px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    -webkit-appearance: none;
+    border-radius: 3px;
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+.wrap_inner input[type=text] {
+    width: 150px;
+}
+#text_message {
+    width: 207px;
+    height: 150px;
+}
+#sms_byte {
+    color: #838383;
+    font-size: 0.8em;
+    margin-left: 130px;
+}
+#box_reply {
+    margin-top: 10px;
+}
+#box_recipient_add {
+    margin-top: 10px;
+}
+#recipient_list {
+    display: block;
+    width: 207px;
+    height: 100px;
+}
+#wrap_recv > button.recipient_delete_btn {
+
+}
+#wpbody-content > div.dodam-wrap > div > div > form > p.submit {
+    margin-left: 10px;
+}
+
+/* SMS Send List */
