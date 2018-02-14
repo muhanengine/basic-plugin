@@ -6,7 +6,7 @@ namespace CodeDodamPlugin\Supplys\Admin;
 
 use CodeDodamPlugin\Models\Admin\SupplyAdminMenuModel;
 use CodeDodamPlugin\Traits\TraitStyleScript;
-use function CodeDodamPlugin\Libs\Utils\callbackFunc;
+use function CodeDodamPlugin\Libs\Utils\getFuncVar;
 use function CodeDodamPlugin\Libs\Functions\getTemplatePart;
 
 class SupplyAdminMenu
@@ -143,6 +143,6 @@ class SupplyAdminMenu
 				break;
 		}
 
-		callbackFunc( $callback, $paramArr );
+		getFuncVar( $paramArr, $callback );
 	}
 }
