@@ -35,6 +35,22 @@ class PluginUpdate
      */
     function __construct() {}
 
+	/**
+	 * Initializer for setting up action handler
+	 */
+	public function phpVersionCheck()
+	{
+		if ( version_compare(phpversion(), '5.6', '<') ) {
+			add_action( 'admin_notices', function () {
+				$message = __( 'SMS (ICODE) plugin requires PHP version 5.6 or later.', _DODAM_ICODE_TEXT_DOMAIN_ );
+				echo '<div class="notice notice-error"><p>'. $message .'</p></div>';
+			});
+
+			return false;
+		}
+
+		return true;
+	}
 
     /**
      * Initializer for setting up action handler

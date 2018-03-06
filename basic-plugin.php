@@ -40,6 +40,11 @@ final class CodeDodamPlugin
 		self::$initiated = true;
 
 		$update = new CodeDodamPlugin\Controllers\PluginUpdate();
+
+		if ( $update->phpVersionCheck() === false ) {
+			return;
+		}
+
 		$update->initHooks( __FILE__ );
 
 		$Install = new CodeDodamPlugin\Supplys\LaunchSupply();

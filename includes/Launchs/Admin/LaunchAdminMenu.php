@@ -5,9 +5,10 @@
 
 namespace CodeDodamPlugin\Launchs\Admin;
 
+use CodeDodamPlugin\Interfaces\InterfaceLaunch;
 use CodeDodamPlugin\Supplys\Admin\SupplyAdminMenu;
 
-class LaunchAdminMenu
+class LaunchAdminMenu implements InterfaceLaunch
 {
 	/** @var $adminMenu SupplyAdminMenu */
 	private $adminMenu = null;
@@ -15,7 +16,7 @@ class LaunchAdminMenu
 	public function __construct()
 	{
 		$this->init();
-		$this->initAdminMenuHooks();
+		$this->initHooks();
 	}
 
 	/**
@@ -29,7 +30,7 @@ class LaunchAdminMenu
 	/**
 	 * Initializer for setting up action handler
 	 */
-	public function initAdminMenuHooks()
+	public function initHooks()
 	{
 		add_action( 'admin_init', array($this, 'addAdminStyle') );
 		add_action( 'admin_menu', array($this, 'addAdminMenu') );
