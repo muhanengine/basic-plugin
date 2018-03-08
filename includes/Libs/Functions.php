@@ -75,7 +75,10 @@ function getTemplateFilePath( $template_name, $template_path = '', $extension = 
 
 	if ( ! empty($template_name) ) {
 		if ( ! $template_path ) {
-			$located = dirname( dirname( __FILE__ ) ) . '/Templates/' . $template_name . '.'. $extension;
+			$located = $template_name . '.'. $extension;
+			if ( ! file_exists($located) ) {
+				$located = dirname( dirname( __FILE__ ) ) . '/Templates/' . $template_name . '.' . $extension;
+			}
 		} else {
 			$located = $template_path . $template_name . '.'. $extension;
 		}
