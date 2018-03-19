@@ -152,19 +152,17 @@ function getKses( $string, $func = 'kses_post', $allowed_html = array(), $allowe
  */
 function getSortArrayKey( &$arr )
 {
-	$arr_keys = array();
+	$arrKeys = array();
 
 	if ( is_array($arr) && ! empty($arr) ) {
-		$array = $arr;
-
-		foreach ( array_keys($array) as $fieldKey ) {
-			foreach ( $array[$fieldKey] as $key => $value ) {
-				$arr_keys[$key][$fieldKey] = $value;
+		foreach ( array_keys($arr) as $fieldKey ) {
+			foreach ( $arr[$fieldKey] as $key => $value ) {
+				$arrKeys[$key][$fieldKey] = $value;
 			}
 		}
 	}
 
-	return $arr_keys;
+	return $arrKeys;
 }
 
 /**
