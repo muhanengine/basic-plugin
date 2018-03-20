@@ -150,7 +150,7 @@ function getKses( $string, $func = 'kses_post', $allowed_html = array(), $allowe
  * @param  array $arr
  * @return array
  */
-function getSortArrayKey( &$arr )
+function getInverseArrayKey( &$arr )
 {
 	$arrKeys = array();
 
