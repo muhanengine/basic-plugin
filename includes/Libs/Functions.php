@@ -190,9 +190,11 @@ function verifyNonce( $nonce_value, $nonce_action, $return = false, $fail_messag
  * Simple and handy object dump
  * @param object|array|string string
  */
-function dumpPre( $obj )
+function dumpPre( $variable )
 {
-	echo '<p><pre>' . var_dump( $obj, TRUE ) . '</pre></p>';
+	echo '<p><pre>';
+	var_dump( $variable, TRUE );
+	echo '</pre></p>';
 }
 
 /**
