@@ -127,3 +127,16 @@ function isIntVal( $val, $unit = '' )
 
 	return $val;
 }
+
+/**
+ * 지정된 배열의 요소에 콜백을 적용합니다.
+ *
+ * @param $array
+ * @param string $callback
+ *
+ * @return array
+ */
+function getArrayMap( $array, $callback = 'trim' )
+{
+	return array_map( $callback, $array );
+}
