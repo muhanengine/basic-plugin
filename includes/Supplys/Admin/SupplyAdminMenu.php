@@ -4,7 +4,7 @@
  */
 namespace CodeDodamPlugin\Supplys\Admin;
 
-use CodeDodamPlugin\Models\Admin\SupplyAdminMenuModel;
+use CodeDodamPlugin\Models\Admin\ModelAdminMenu;
 use CodeDodamPlugin\Traits\TraitStyleScript;
 use function CodeDodamPlugin\Libs\Utils\getFuncVar;
 use function CodeDodamPlugin\Libs\Functions\getTemplatePart;
@@ -20,7 +20,7 @@ class SupplyAdminMenu
 	 */
 	public function addAdminMenuPage()
 	{
-		$menuPage = &SupplyAdminMenuModel::getScheme();
+		$menuPage = &ModelAdminMenu::getScheme();
 
 		foreach ( $menuPage as $menu ) {
 			$callback = array_keys( $menu );
@@ -39,7 +39,7 @@ class SupplyAdminMenu
 
 		$args['var']['tab']     = 'general';
 		$args['var']['section'] = '';
-		$args['var']['title'] = SupplyAdminMenuModel::getSMSConfigure();
+		$args['var']['title'] = ModelAdminMenu::getSMSConfigure();
 
 		if ( isset( $_REQUEST['tab'] ) ) {
 			$args['var']['tab'] = $_REQUEST['tab'];
@@ -58,7 +58,7 @@ class SupplyAdminMenu
 	public function smsIcodeViewSend()
 	{
 		$args = array();
-		$args['var']['title'] = SupplyAdminMenuModel::getSMSSend();
+		$args['var']['title'] = ModelAdminMenu::getSMSSend();
 
 		getTemplatePart( 'Admin/TemplateSMSSend', $args );
 	}
@@ -69,7 +69,7 @@ class SupplyAdminMenu
 	public function smsIcodeViewReceivers()
 	{
 		$args = array();
-		$args['var']['title'] = SupplyAdminMenuModel::getHPList();
+		$args['var']['title'] = ModelAdminMenu::getHPList();
 
 		getTemplatePart( 'Admin/templateRecipientList', $args );
 	}
@@ -80,7 +80,7 @@ class SupplyAdminMenu
 	public function smsIcodeViewGroup()
 	{
 		$args = array();
-		$args['var']['title'] = SupplyAdminMenuModel::getHPGroup();
+		$args['var']['title'] = ModelAdminMenu::getHPGroup();
 
 		getTemplatePart( 'Admin/TemplateRecipientGroup', $args );
 	}
@@ -91,7 +91,7 @@ class SupplyAdminMenu
 	public function smsIcodeViewSendList()
 	{
 		$args = array();
-		$args['var']['title'] = SupplyAdminMenuModel::getSMSSendList();
+		$args['var']['title'] = ModelAdminMenu::getSMSSendList();
 
 		getTemplatePart( 'Admin/TemplateSendList', $args );
 	}
@@ -102,7 +102,7 @@ class SupplyAdminMenu
 	public function smsIcodeViewTemplate()
 	{
 		$args = array();
-		$args['var']['title'] = SupplyAdminMenuModel::getSMSMessage();
+		$args['var']['title'] = ModelAdminMenu::getSMSMessage();
 
 		getTemplatePart( 'Admin/TemplateSMSTemplates', $args );
 	}
@@ -113,7 +113,7 @@ class SupplyAdminMenu
 	public function smsIcodeViewBookFile()
 	{
 		$args = array();
-		$args['var']['title'] = SupplyAdminMenuModel::getHPFile();
+		$args['var']['title'] = ModelAdminMenu::getHPFile();
 
 		getTemplatePart( 'Admin/TemplateRecipientFile', $args );
 	}

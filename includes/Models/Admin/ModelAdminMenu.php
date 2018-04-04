@@ -3,7 +3,7 @@ namespace CodeDodamPlugin\Models\Admin;
 
 use function CodeDodamPlugin\Libs\Utils\_isset;
 
-class SupplyAdminMenuModel
+class ModelAdminMenu
 {
 	/**
 	 * top-level menu, submenu page

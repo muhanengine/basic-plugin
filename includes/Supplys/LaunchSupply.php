@@ -1,7 +1,7 @@
 <?php
 namespace CodeDodamPlugin\Supplys;
 
-use CodeDodamPlugin\Models\LaunchSupplyModel;
+use CodeDodamPlugin\Models\ModelLaunchSupply;
 
 class LaunchSupply {
 
@@ -26,12 +26,12 @@ class LaunchSupply {
 	public function install( $dirName, $nameSpace, $InstallDir = 'Launchs' ) {
 		$this->nameSpace    = $nameSpace;
 		$this->InstallDir   = $InstallDir;
-		$this->composerDir  = LaunchSupplyModel::composerDirectory( $dirName );
-		$this->adminDir     = LaunchSupplyModel::adminDirectory();
-		$this->frontEndDir  = LaunchSupplyModel::FrontEndDirectory();
-		$this->siteDir      = LaunchSupplyModel::siteDirectory();
-		$this->ajax         = LaunchSupplyModel::ajaxDirectory();
-		$this->classMapFile = LaunchSupplyModel::autoloadClassMapFile();
+		$this->composerDir  = ModelLaunchSupply::composerDirectory( $dirName );
+		$this->adminDir     = ModelLaunchSupply::adminDirectory();
+		$this->frontEndDir  = ModelLaunchSupply::FrontEndDirectory();
+		$this->siteDir      = ModelLaunchSupply::siteDirectory();
+		$this->ajax         = ModelLaunchSupply::ajaxDirectory();
+		$this->classMapFile = ModelLaunchSupply::autoloadClassMapFile();
 
 		$this->installClasses();
 		$this->installEntrance();

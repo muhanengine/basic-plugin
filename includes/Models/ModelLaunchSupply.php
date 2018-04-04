@@ -3,7 +3,7 @@ namespace CodeDodamPlugin\Models;
 
 use function CodeDodamPlugin\Libs\Utils\_isset;
 
-class LaunchSupplyModel
+class ModelLaunchSupply
 {
 	/**
 	 * @param string $key
