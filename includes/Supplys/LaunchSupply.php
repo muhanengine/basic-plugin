@@ -47,10 +47,12 @@ class LaunchSupply
 	{
 		if ( is_admin() ) {
 			$this->addLaunchDir( $this->adminDir );
-		} else if ( wp_doing_ajax() ) {
-			$this->addLaunchDir( $this->ajaxDir );
 		} else {
 			$this->addLaunchDir( $this->frontDir );
+		}
+
+		if ( wp_doing_ajax() ) {
+			$this->addLaunchDir( $this->ajaxDir );
 		}
 
 		$this->addLaunchDir( $this->siteDir );
