@@ -1,6 +1,6 @@
 <?php
 /**
- * @Description: 문자메시지 메뉴추가 관리
+ * @Description:
  */
 
 namespace CodeDodamPlugin\Launchs\Admin;
@@ -13,10 +13,14 @@ class LaunchAdminMenu implements InterfaceLaunch
 	/** @var $adminMenu SupplyAdminMenu */
 	private $adminMenu = null;
 
-	public function __construct()
+	public function __construct() {}
+
+	/**
+	 * Check activation
+	 */
+	public function isActivated()
 	{
-		$this->init();
-		$this->initHooks();
+		return true;
 	}
 
 	/**
@@ -25,6 +29,8 @@ class LaunchAdminMenu implements InterfaceLaunch
 	public function init()
 	{
 		$this->adminMenu = new SupplyAdminMenu();
+
+		$this->initHooks();
 	}
 
 	/**

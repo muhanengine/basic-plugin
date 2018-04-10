@@ -1,123 +1,95 @@
 <?php
 namespace CodeDodamPlugin\Supplys;
 
-use CodeDodamPlugin\Models\ModelLaunchSupply;
+use CodeDodamPlugin\Models\LaunchSupplyModel;
 
-class LaunchSupply {
-
+class LaunchSupply
+{
 	private $nameSpace;
-	private $InstallDir;
+	private $installDir;
 	private $composerDir;
 	private $adminDir;
-	private $frontEndDir;
+	private $frontDir;
 	private $siteDir;
-	private $ajax;
-	private $classMapFile;
-	private static $autoLoadClass = null;
+	private $ajaxDir;
+	private $arrayDir;
+	private $classFileName;
 
-	public function __construct() {
-	}
+	public function __construct() {}
 
 	/**
 	 * @param string $dirName composer directory location
 	 * @param string $nameSpace
-	 * @param string $InstallDir Installs directory name
+	 * @param string $installDir Installs directory name
 	 */
-	public function install( $dirName, $nameSpace, $InstallDir = 'Launchs' ) {
-		$this->nameSpace    = $nameSpace;
-		$this->InstallDir   = $InstallDir;
-		$this->composerDir  = ModelLaunchSupply::composerDirectory( $dirName );
-		$this->adminDir     = ModelLaunchSupply::adminDirectory();
-		$this->frontEndDir  = ModelLaunchSupply::FrontEndDirectory();
-		$this->siteDir      = ModelLaunchSupply::siteDirectory();
-		$this->ajax         = ModelLaunchSupply::ajaxDirectory();
-		$this->classMapFile = ModelLaunchSupply::autoloadClassMapFile();
+	public function install( $dirName, $nameSpace, $installDir = 'Launchs' ) {
+		$this->nameSpace   = $nameSpace;
+		$this->installDir  = $installDir;
+		$this->composerDir = LaunchSupplyModel::composerDirectory( $dirName );
 
-		$this->installClasses();
+		$this->adminDir = LaunchSupplyModel::adminDirectory();
+		$this->ajaxDir  = LaunchSupplyModel::ajaxDirectory();
+		$this->frontDir = LaunchSupplyModel::FrontEndDirectory();
+		$this->siteDir  = LaunchSupplyModel::siteDirectory();
+
+		$this->classFileName = LaunchSupplyModel::autoloadClassMapFile();
+
+		$this->arrayDir = [];
+
 		$this->installEntrance();
-	}
-
-	/**
-	 * Install Admin
-	 */
-	private function installAdmin() {
-		$this->installImplement( $this->adminDir );
-	}
-
-	/**
-	 * Install Ajax
-	 */
-	private function installAjax() {
-		$this->installImplement( $this->ajax );
-	}
-
-	/**
-	 * Install Front-end
-	 */
-	private function installFrontEnd() {
-		$this->installImplement( $this->frontEndDir );
-	}
-
-	/**
-	 * Install site/admin All
-	 */
-	private function installSite() {
-		$this->installImplement( $this->siteDir );
+		$this->installClasses();
 	}
 
 	/**
 	 * Install
 	 */
-	private function installEntrance() {
-		if ( wp_doing_ajax() ) {
-			$this->installAjax();
+	private function installEntrance()
+	{
+		if ( is_admin() ) {
+			$this->addInstallDir( $this->adminDir );
+		} else if ( wp_doing_ajax() ) {
+			$this->addInstallDir( $this->ajaxDir );
 		} else {
-			if ( is_admin() ) {
-				$this->installAdmin();
-			} else {
-				$this->installFrontEnd();
-			}
-
-			$this->installSite();
+			$this->addInstallDir( $this->frontDir );
 		}
-	}
 
-	/**
-	 * @param $dir
-	 */
-	private function installImplement( $dir ) {
-		if ( isset( self::$autoLoadClass[ $dir ] ) && is_array( self::$autoLoadClass[ $dir ] ) ) {
-			foreach ( self::$autoLoadClass[ $dir ] as $key => $Install ) {
-				new $Install[0];
-			}
-		}
+		$this->addInstallDir( $this->siteDir );
 	}
 
 	/**
 	 * Install Classes
 	 */
-	private function installClasses() {
-		if ( is_null( self::$autoLoadClass ) ) {
-			self::$autoLoadClass = array();
+	private function installClasses()
+	{
+		$classMapFile = $this->composerDir . '/' . $this->classFileName;
 
-			$classMapFile = $this->composerDir . '/' . $this->classMapFile;
+		if ( file_exists( $classMapFile ) ) {
+			$nameSpace = $this->nameSpace . '\\' . $this->installDir;
+			$classMap = require_once $classMapFile;
 
-			if ( file_exists( $classMapFile ) ) {
-				$nameSpace = $this->nameSpace . '\\' . $this->InstallDir;
-				$classMap  = require $classMapFile;
+			foreach ( $this->arrayDir as $dir ) {
+				foreach ( $classMap as $instance => $value ) {
+					if ( strpos( $instance, $nameSpace . '\\' . $dir . '\\' ) !== false ) {
+						$instance = new $instance();
 
-				foreach ( $classMap as $key => $value ) {
-					if ( strpos( $key, $nameSpace . '\\' . $this->adminDir . '\\' ) !== false ) {
-						self::$autoLoadClass[ $this->adminDir ][] = array( $key, $value );
-					} else if ( strpos( $key, $nameSpace . '\\' . $this->frontEndDir . '\\' ) !== false ) {
-						self::$autoLoadClass[ $this->frontEndDir ][] = array( $key, $value );
-					} else if ( strpos( $key, $nameSpace . '\\' . $this->ajax . '\\' ) !== false ) {
-						self::$autoLoadClass[ $this->ajax ][] = array( $key, $value );
-					} else if ( strpos( $key, $nameSpace . '\\' ) !== false ) {
-						self::$autoLoadClass[ $this->siteDir ][] = array( $key, $value );
+						if ( $instance->isActivated() ) {
+							$instance->init();
+						} else {
+							unset( $instance );
+						}
 					}
 				}
 			}
 		}
+	}
+
+	/**
+	 * Install Directory
+	 *
+	 * @param $dir
+	 */
+	private function addInstallDir( $dir )
+	{
+		array_push( $this->arrayDir, $dir );
 	}
 }

@@ -3,7 +3,7 @@ namespace CodeDodamPlugin\Models;
 
 use function CodeDodamPlugin\Libs\Utils\_isset;
 
-class ModelLaunchSupply
+class LaunchSupplyModel
 {
 	/**
 	 * @param string $key
@@ -27,7 +27,7 @@ class ModelLaunchSupply
 			);
 
 			$scheme['Front-end'] = array(
-				'value'       => 'Front-end',
+				'value'       => 'Front_end',
 				'description' => __( 'Install front-end directory', _DODAM_ICODE_TEXT_DOMAIN_ ),
 			);
 

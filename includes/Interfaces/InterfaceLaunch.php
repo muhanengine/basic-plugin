@@ -16,4 +16,9 @@ interface InterfaceLaunch
 	 * Beginning for setting up action handler
 	 */
 	public function initHooks();
+
+	/**
+	 * Check activation
+	 */
+	public function isActivated();
 }
