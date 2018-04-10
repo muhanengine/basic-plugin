@@ -22,7 +22,7 @@ class LaunchSupply
 	 * @param string $nameSpace
 	 * @param string $installDir Installs directory name
 	 */
-	public function install( $dirName, $nameSpace, $installDir = 'Launchs' ) {
+	public function launch( $dirName, $nameSpace, $installDir = 'Launchs' ) {
 		$this->nameSpace   = $nameSpace;
 		$this->installDir  = $installDir;
 		$this->composerDir = LaunchSupplyModel::composerDirectory( $dirName );
@@ -36,30 +36,30 @@ class LaunchSupply
 
 		$this->arrayDir = [];
 
-		$this->installEntrance();
-		$this->installClasses();
+		$this->launchEntrance();
+		$this->launchClasses();
 	}
 
 	/**
 	 * Install
 	 */
-	private function installEntrance()
+	private function launchEntrance()
 	{
 		if ( is_admin() ) {
-			$this->addInstallDir( $this->adminDir );
+			$this->addLaunchDir( $this->adminDir );
 		} else if ( wp_doing_ajax() ) {
-			$this->addInstallDir( $this->ajaxDir );
+			$this->addLaunchDir( $this->ajaxDir );
 		} else {
-			$this->addInstallDir( $this->frontDir );
+			$this->addLaunchDir( $this->frontDir );
 		}
 
-		$this->addInstallDir( $this->siteDir );
+		$this->addLaunchDir( $this->siteDir );
 	}
 
 	/**
 	 * Install Classes
 	 */
-	private function installClasses()
+	private function launchClasses()
 	{
 		$classMapFile = $this->composerDir . '/' . $this->classFileName;
 
@@ -88,7 +88,7 @@ class LaunchSupply
 	 *
 	 * @param $dir
 	 */
-	private function addInstallDir( $dir )
+	private function addLaunchDir( $dir )
 	{
 		array_push( $this->arrayDir, $dir );
 	}

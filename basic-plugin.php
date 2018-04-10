@@ -48,7 +48,7 @@ final class CodeDodamPlugin
 		$update->initHooks( __FILE__ );
 
 		$Install = new CodeDodamPlugin\Supplys\LaunchSupply();
-		$Install->install( __DIR__, __CLASS__ );
+		$Install->launch( __DIR__, __CLASS__ );
 	}
 }
 
