@@ -60,7 +60,7 @@ function _isset( $key, &$request, $callback = '', $default = '' )
 	}
 
 	if ( ! is_null($variable) ) {
-		return getFuncVar( $variable, $callback, $default );
+		return getFuncVar( $variable, $callback );
 	} else {
 		return $default;
 	}
@@ -73,7 +73,7 @@ function _isset( $key, &$request, $callback = '', $default = '' )
  * @param string $default
  * @return string
  */
-function getFuncVar( $variable, $callback = '', $default = '' )
+function getFuncVar( $variable, $callback = '' )
 {
 	if ( is_callable( $callback ) ) {
 		if ( is_array($variable) ) {
@@ -83,11 +83,7 @@ function getFuncVar( $variable, $callback = '', $default = '' )
 		}
 	}
 
-	if ( empty($variable) || is_null($variable) ) {
-		return $default;
-	} else {
-		return $variable;
-	}
+	return $variable;
 }
 
 /**

@@ -2,7 +2,41 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eddf8291-5b75-4fef-b854-449f5c05a3a4" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/includes/Libs/Functions.php" afterPath="$PROJECT_DIR$/includes/Libs/Functions.php" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/smsAdmin.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/smsAdmin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/loadingAnimation.gif" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/loadingAnimation.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic-plugin.php" beforeDir="false" afterPath="$PROJECT_DIR$/basic-plugin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/Controller/PluginUpdate.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/Controller/PluginUpdate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/Interfaces/InterfaceLaunch.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/Interfaces/InterfaceLaunch.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/Launchs/Admin/LaunchAdminMenu.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/Launchs/Admin/LaunchAdminMenu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/Libs/Defines.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/Libs/Defines.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/Libs/Functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/Libs/Functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/Libs/Utils.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/Libs/Utils.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/Models/Admin/ModelAdminMenu.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/Models/Admin/ModelAdminMenu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/Models/LaunchSupplyModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/Models/LaunchSupplyModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/Supplys/Admin/SupplyAdminAddOn.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/Supplys/Admin/SupplyAdminAddOn.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/Supplys/Admin/SupplyAdminMenu.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/Supplys/Admin/SupplyAdminMenu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/Supplys/LaunchSupply.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/Supplys/LaunchSupply.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/Template-functions/TemplateFunctions.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/Template-functions/TemplateFunctions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/Templates/Admin/TemplateRecipientFile.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/Templates/Admin/TemplateRecipientFile.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/Templates/Admin/TemplateRecipientGroup.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/Templates/Admin/TemplateRecipientGroup.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/Templates/Admin/TemplateRecipientList.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/Templates/Admin/TemplateRecipientList.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/Templates/Admin/TemplateSMSConfigure.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/Templates/Admin/TemplateSMSConfigure.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/Templates/Admin/TemplateSMSSend.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/Templates/Admin/TemplateSMSSend.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/Templates/Admin/TemplateSMSTemplates.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/Templates/Admin/TemplateSMSTemplates.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/Templates/Admin/TemplateSendList.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/Templates/Admin/TemplateSendList.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/Traits/TraitStyleScript.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/Traits/TraitStyleScript.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/autoload.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/autoload.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/ClassLoader.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/ClassLoader.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_files.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_files.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_real.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_real.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -11,22 +45,35 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="Functions.php" pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Functions.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/includes/Libs/Functions.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="441">
-              <caret line="194" column="20" lean-forward="true" selection-start-line="194" selection-start-column="20" selection-end-line="194" selection-end-column="20" />
-              <folding />
+              <caret line="194" column="20" selection-start-line="194" selection-start-column="20" selection-end-line="194" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Utils.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/includes/Libs/Utils.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="309">
+              <caret line="63" column="12" lean-forward="true" selection-start-line="63" selection-start-column="12" selection-end-line="63" selection-end-column="12" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>getFuncVar</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -35,6 +82,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/includes/Libs/Functions.php" />
+        <option value="$PROJECT_DIR$/includes/Libs/Utils.php" />
       </list>
     </option>
   </component>
@@ -44,7 +92,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true">
+  <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/composer" />
     </include_path>
@@ -56,22 +104,11 @@
     <option name="height" value="1027" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
-      <flattenPackages />
-      <showMembers />
-      <showModules />
-      <showLibraryContents />
-      <hideEmptyPackages />
-      <abbreviatePackageNames />
-      <autoscrollToSource />
-      <autoscrollFromSource />
-      <sortByType />
-      <manualOrder />
+    <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -111,9 +148,6 @@
       </list>
     </option>
   </component>
-  <component name="ShelveChangesManager" show_recycled="false">
-    <option name="remove_strategy" value="false" />
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -125,34 +159,36 @@
       <option name="presentableId" value="Default" />
       <updated>1521681175705</updated>
       <workItem from="1521681177182" duration="17000" />
+      <workItem from="1527726689795" duration="101000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17000" />
+    <option name="totallyTimeSpent" value="118000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="27" y="23" width="1653" height="1027" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24953446" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.2526381" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,16 +197,26 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager />
-    <watches-manager />
-  </component>
+  <component name="WordPressConfiguration" doNotAskAgain="true" />
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/includes/Libs/Functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
+        <state relative-caret-position="2820">
           <caret line="194" column="20" lean-forward="true" selection-start-line="194" selection-start-column="20" selection-end-line="194" selection-end-column="20" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/Libs/Functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="194" column="20" selection-start-line="194" selection-start-column="20" selection-end-line="194" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/Libs/Utils.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="63" column="12" lean-forward="true" selection-start-line="63" selection-start-column="12" selection-end-line="63" selection-end-column="12" />
         </state>
       </provider>
     </entry>
