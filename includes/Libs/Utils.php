@@ -136,3 +136,17 @@ function getArrayMap( $array, $callback = 'trim' )
 {
 	return array_map( $callback, $array );
 }
+
+/**
+ * Call the callback given by the first parameter(string,array)
+ * @param $callback
+ * @param $param
+ * @return mixed
+ */
+function callbackFunc( $callback, $param ) {
+	if ( ! is_array($param) ) {
+		return call_user_func( $callback, $param );
+	} else {
+		return call_user_func_array( $callback, $param );
+	}
+}
