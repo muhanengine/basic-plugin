@@ -44,7 +44,7 @@ function postIsset( $needle, $callback = '', $default = '' )
 /**
  * 설정된 변수 확인
  * @param string $key 체크하려는 이름
- * @param array $request 설정된 변수
+ * @param array|object $request 설정된 변수
  * @param string $callback
  * @param string $default
  * @return string
@@ -60,7 +60,7 @@ function _isset( $key, &$request, $callback = '', $default = '' )
 	}
 
 	if ( ! is_null($variable) ) {
-		return getFuncVar( $variable, $callback );
+		return getFuncVar( $variable, $callback, $default );
 	} else {
 		return $default;
 	}
@@ -68,22 +68,22 @@ function _isset( $key, &$request, $callback = '', $default = '' )
 
 /**
  * Call the callback given by the first parameter
- * @param string|array $variable parameter
+ * @param string $variable parameter
  * @param string $callback callback
  * @param string $default
  * @return string
  */
-function getFuncVar( $variable, $callback = '' )
+function getFuncVar( $variable, $callback = '', $default = '' )
 {
 	if ( is_callable( $callback ) ) {
-		if ( is_array($variable) ) {
-			$variable = call_user_func_array( $callback, $variable );
-		} else {
-			$variable = call_user_func( $callback, $variable );
-		}
+		$variable = call_user_func( $callback, $variable );
 	}
 
-	return $variable;
+	if ( empty($variable) || is_null($variable) ) {
+		return $default;
+	} else {
+		return $variable;
+	}
 }
 
 /**
@@ -122,19 +122,6 @@ function isIntVal( $val, $unit = '' )
 	}
 
 	return $val;
-}
-
-/**
- * 지정된 배열의 요소에 콜백을 적용합니다.
- *
- * @param $array
- * @param string $callback
- *
- * @return array
- */
-function getArrayMap( $array, $callback = 'trim' )
-{
-	return array_map( $callback, $array );
 }
 
 /**

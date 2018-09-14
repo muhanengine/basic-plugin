@@ -9,7 +9,6 @@
 namespace CodeDodamPlugin\Libs\Functions;
 
 use function CodeDodamPlugin\Libs\Utils\_isset;
-use function CodeDodamPlugin\Libs\Utils\getFuncVar;
 
 /**
  * 템플릿 파일 불러오기
@@ -75,10 +74,7 @@ function getTemplateFilePath( $template_name, $template_path = '', $extension = 
 
 	if ( ! empty($template_name) ) {
 		if ( ! $template_path ) {
-			$located = $template_name . '.'. $extension;
-			if ( ! file_exists($located) ) {
-				$located = dirname( dirname( __FILE__ ) ) . '/Templates/' . $template_name . '.' . $extension;
-			}
+			$located = dirname( dirname( __FILE__ ) ) . '/Templates/' . $template_name . '.'. $extension;
 		} else {
 			$located = $template_path . $template_name . '.'. $extension;
 		}
@@ -100,9 +96,7 @@ function getEscaping( $text, $default = '', $func = 'esc_attr' )
 		$text = $default;
 	}
 
-	if ( is_callable($func) ) {
-		$text = getFuncVar( $text, $func );
-	}
+	$text = call_user_func( $func, $text );
 
 	return $text;
 }
@@ -150,19 +144,31 @@ function getKses( $string, $func = 'kses_post', $allowed_html = array(), $allowe
  * @param  array $arr
  * @return array
  */
-function getInverseArrayKey( &$arr )
+function getSortArrayKey( &$arr )
 {
-	$arrKeys = array();
+	$arr_keys = array();
 
 	if ( is_array($arr) && ! empty($arr) ) {
-		foreach ( array_keys($arr) as $fieldKey ) {
-			foreach ( $arr[$fieldKey] as $key => $value ) {
-				$arrKeys[$key][$fieldKey] = $value;
+		$array = $arr;
+
+		foreach ( array_keys($array) as $fieldKey ) {
+			foreach ( $array[$fieldKey] as $key => $value ) {
+				$arr_keys[$key][$fieldKey] = $value;
 			}
 		}
 	}
 
-	return $arrKeys;
+	return $arr_keys;
+}
+
+/**
+ * [Generates and returns a nonce.]
+ * @param  string $nonce_action Action name
+ * @return string
+ */
+function wpCreateNonce( $nonce_action )
+{
+	return wp_create_nonce( $nonce_action );
 }
 
 /**
@@ -171,9 +177,9 @@ function getInverseArrayKey( &$arr )
  * @param  string $nonce_action Action name
  * @param  boolean $return      Return Values
  * @param  string $fail_message Fail Message
- * @return mixed|boolean
+ * @return string
  */
-function verifyNonce( $nonce_value, $nonce_action, $return = false, $fail_message = 'Nonce verification failed' )
+function wpVerifyNonce( $nonce_value, $nonce_action, $return = false, $fail_message = 'Nonce verification failed' )
 {
 	if ( ! wp_verify_nonce( $nonce_value, $nonce_action ) ) {
 		if ( true === $return ) {
@@ -190,11 +196,9 @@ function verifyNonce( $nonce_value, $nonce_action, $return = false, $fail_messag
  * Simple and handy object dump
  * @param object|array|string string
  */
-function dumpPre( $variable )
+function getDump( $obj )
 {
-	echo '<p><pre>';
-	var_dump( $variable, TRUE );
-	echo '</pre></p>';
+	echo '<p><pre>' . print_r( $obj, TRUE ) . '</pre></p>';
 }
 
 /**
@@ -293,6 +297,10 @@ function wpArrayUpdatePostMeta( &$post_metas, &$_post, $post_id )
  */
 function curlPost( $url, array &$post = NULL, &$options = array() )
 {
+	if ( ! is_array($options) ) {
+		return null;
+	}
+
 	$defaults = array(
 		CURLOPT_POST           => TRUE,
 		CURLOPT_RETURNTRANSFER => TRUE,
@@ -316,6 +324,10 @@ function curlPost( $url, array &$post = NULL, &$options = array() )
  */
 function curlGet( $url, &$options = array() )
 {
+	if ( ! is_array($options) ) {
+		return null;
+	}
+
 	$defaults = array(
 		CURLOPT_RETURNTRANSFER => TRUE,
 		CURLOPT_COOKIESESSION  => TRUE,
