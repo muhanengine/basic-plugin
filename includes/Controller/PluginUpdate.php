@@ -54,14 +54,15 @@ class PluginUpdate
 
     /**
      * Initializer for setting up action handler
-     * @param string $main_file 플러그인 파일 절대경로
+     *
+     * @param string $mainFile 플러그인 파일 절대경로
      */
-    public function initHooks( $main_file )
+    public function initHooks( $mainFile )
     {
         $this->initiated = true;
 
-        register_activation_hook( $main_file, array( $this, 'pluginInstall' ) ); // 플러그인 활성화 호출
-        register_deactivation_hook( $main_file, array( $this, 'pluginUninstall' ) ); // 플러그인 비활성화 호출
+        register_activation_hook( $mainFile, array( $this, 'pluginInstall' ) ); // 플러그인 활성화 호출
+        register_deactivation_hook( $mainFile, array( $this, 'pluginUninstall' ) ); // 플러그인 비활성화 호출
     }
 
     /**
@@ -70,14 +71,14 @@ class PluginUpdate
      * @param [string] $update_path     업데이트 파일 경로
      * @param [string] $plugin_slug     슬러그명
      */
-    public function autoUpdateCheck( $current_version, $update_path, $plugin_slug )
+    public function autoUpdateCheck( $currentVersion, $updatePath, $pluginSlug )
     {
         // Set the class public variables
-        $this->currentVersion = $current_version;
-        $this->updatePath     = $update_path;
-        $this->pluginSlug     = $plugin_slug;
+        $this->currentVersion = $currentVersion;
+        $this->updatePath     = $updatePath;
+        $this->pluginSlug     = $pluginSlug;
 	    /** @noinspection PhpUnusedLocalVariableInspection */
-        list ( $t1, $t2 )      = explode( '/', $plugin_slug );
+        list ( $t1, $t2 )      = explode( '/', $pluginSlug );
         $this->slug            = str_replace('.php', '', $t2);
  
         // define the alternative API for updating checking
