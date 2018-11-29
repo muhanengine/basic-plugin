@@ -114,7 +114,7 @@ class PluginUpdate
 
             $transient->response[$this->pluginSlug] = $obj;
 
-            update_option( 'leebon-plugin-version', $remote_version );
+            update_option( $this->pluginSlug, $remote_version );
         }
 
         return $transient;
